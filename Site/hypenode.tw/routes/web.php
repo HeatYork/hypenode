@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('', function () {
     return view('master');
 });
+Route::get('createNotification','CreateNotificationController@index');
+

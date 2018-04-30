@@ -5,23 +5,23 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!-- BEGIN GLOBAL PLUGINS STYLES -->
-    <link href="public/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="public/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="public/css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL PLUGINS STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS STYLES-->
     <!-- END PAGE LEVEL PLUGINS STYLES-->
 
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="public/css/components.css" rel="stylesheet" id="style_components" type="text/css" />
-    <link href="public/css/layout.min.css" rel="stylesheet" type="text/css" />
-    <link href="public/css/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="css/components.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
     <!-- END THEME GLOBAL STYLES -->
 
     <!-- BEGIN THEME PAGE LEVEL STYLES -->
-
-<!-- END THEME PAGE LEVEL STYLES -->
+    @yield('pageCss')
+    <!-- END THEME PAGE LEVEL STYLES -->
 
 <title>HypeNode</title>
 
@@ -93,25 +93,25 @@
 <!--END JSON DATA END-->
 
 <!-- BEGIN GLOBAL PLUGINS PLUGINS -->
-<script src="public/js/jquery.min.js" type="text/javascript"></script>
-<script src="public/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="public/js/bootstrap-switch.min.js" type="text/javascript"></script>
-<script src="public/js/fontawesome-all.min.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/bootstrap-switch.min.js" type="text/javascript"></script>
+<script src="js/fontawesome-all.min.js" type="text/javascript"></script>
 <!-- END GLOBAL PLUGINS PLUGINS -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
-<script src="public/js/app.min.js" type="text/javascript"></script>
+<script src="js/app.min.js" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-
+@yield('pageJs')
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
-<script src="public/js/layout.min.js" type="text/javascript"></script>
+<script src="js/layout.min.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 </body>
 </html>
