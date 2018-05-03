@@ -1,4 +1,19 @@
+# operator system files
+.DS_Store
 
-\.idea/
+# exclude log files
+**/*.log
+**/log
 
-\.DS_Store
+# exclude ide files
+.buildpath
+.project
+.idea
+.vscode
+
+# exclude composer vendor files
+vendor
+
+# exclude test files
+heat.php
+composer\.lock

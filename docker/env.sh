@@ -124,11 +124,11 @@ do
             ;;
         mg)
             # 執行 migrate
-            php ./../vendor/bin/phinx migrate
+            php ./vendor/bin/phinx migrate
             ;;
         rb)
             # 執行 rollback
-            php ./../vendor/bin/phinx rollback -t 0
+            php ./vendor/bin/phinx rollback -t 0
             ;;
         *)
             # 離開程序

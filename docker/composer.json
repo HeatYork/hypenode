@@ -1,0 +1,6 @@
+{
+    "require-dev": {
+        "robmorgan/phinx": "^0.9.1",
+        "fzaninotto/faker": "^1.6"
+    }
+}
