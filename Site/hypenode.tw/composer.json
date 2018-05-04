@@ -34,7 +34,7 @@
         "psr-4": {
             "Tests\\": "tests/",
             "Core\\": "../../System/Core",
-            "Libaray\\": "../../System/Libaray",
+            "Library\\": "../../System/Library",
             "Model\\": "../../System/Model"
         }
     },

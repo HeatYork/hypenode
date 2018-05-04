@@ -108,7 +108,7 @@ do
                         docker-compose up -d --build nginx
                         ;;
                     3)
-                        docker rm -f mysql
+                        docker rm -f mariadb
                         docker-compose up -d --build mariadb
                         ;;
                     4)

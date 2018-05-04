@@ -10,12 +10,12 @@ class CreateNotificationController extends BaseController
     public function index()
     {
         echo \Library\Aes\Iv::ACCESS_TOKEN_IV;
-//        $array = array(
-//            'web_id' => '123',
-//            'username' => 'york',
-//            'password' => 'yorkpw',
-//            'add_time' => time());
-//        DB::connection('mariadb')->table('account')->insert( $array );
+        $array = array(
+            'web_id' => '123',
+            'username' => 'york',
+            'password' => 'yorkpw',
+            'add_time' => time());
+        DB::connection('mariadb')->table('account')->insert($array);
 //        return view('createNotification');
     }
 }

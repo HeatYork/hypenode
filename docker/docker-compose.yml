@@ -16,7 +16,6 @@ services:
     container_name: php
     networks:
       - backend
-    #image: php:7.1.16-fpm
     build: ./php/
     expose:
       - 9000
@@ -46,7 +45,6 @@ services:
   mariadb:
     container_name: mariadb
     networks:
-      - frontend
       - backend
     image: mariadb:10.2
     ports:

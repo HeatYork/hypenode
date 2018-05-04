@@ -55,6 +55,10 @@ class CreateAccount extends AbstractMigration
             'default' => 0,
             'limit' => 30,
             'comment' => '帳號密碼'
+        ])->addColumn('remember_token', 'integer', [
+            'null' => true,
+            'limit' => 100,
+            'comment' => 'laravel session token'
         ])->addColumn('add_time', 'integer', [
             'null' => false,
             'default' => 0,
