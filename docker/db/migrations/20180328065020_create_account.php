@@ -48,6 +48,10 @@ class CreateAccount extends AbstractMigration
             'null' => false,
             'limit' => 30,
             'comment' => '網站ID名稱'
+        ])->addColumn('email', 'char', [
+            'null' => false,
+            'limit' => MysqlAdapter::TEXT_TINY,
+            'comment' => '信箱'
         ])->addColumn('username', 'char', [
             'null' => false,
             'limit' => 30,

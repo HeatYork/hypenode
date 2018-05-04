@@ -18,6 +18,7 @@ class CreateNotificationController extends BaseController
         $array = array(
             'web_id'   => \Core\Sequence::generate(\Core\Sequence::WEB_ID),
             'web_name' => 'hypenode',
+            'email'    => 'jason945119@gmail.com',
             'username' => 'york',
             'password' => Hash::make('abcd'),
             'add_time' => time());
