@@ -14,12 +14,14 @@ class CreateNotificationController extends BaseController
      */
     public function index()
     {
-//        $array = array(
-//            'web_id' => '123',
-//            'username' => 'york',
-//            'password' => 'yorkpw',
-//            'add_time' => time());
-//        DB::connection('mariadb')->table('account')->insert($array);
+        $password = Hash::make('secret');
+
+        $array = array(
+            'web_id' => 'hypenode',
+            'username' => 'york',
+            'password' => 'yorkpw',
+            'add_time' => time());
+        DB::connection('mariadb')->table('account')->insert($array);
 //        return view('createNotification');
     }
 }
