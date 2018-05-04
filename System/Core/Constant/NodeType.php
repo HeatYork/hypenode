@@ -17,10 +17,17 @@ class NodeType
      */
     public static function isAllowedNodeType( string $nodeType ) : bool
     {
-        $class = new \ReflectionClass( __CLASS__ );
+        try
+        {
+            $class = new \ReflectionClass( __CLASS__ );
 
-        $allowNodeTypes = array_values($class->getConstants());
+            $allowNodeTypes = array_values($class->getConstants());
 
-        return in_array( $nodeType, $allowNodeTypes);
+            return in_array( $nodeType, $allowNodeTypes);
+        }
+        catch( \ReflectionException $e )
+        {
+            return false;
+        }
     }
 }

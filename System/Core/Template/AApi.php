@@ -91,9 +91,9 @@ abstract class AApi
     protected function responseSuccess( $data = null ) : void
     {
         // 建立 Response Data
-        $responseData = $this->createResponseData( self::SUCCESS, $data );
+        $responseData = self::createResponseData( self::SUCCESS, $data );
         // 檢查 Call Back
-        $responseData = $this->checkCallBack( \json_encode( $responseData ) );
+        $responseData = self::checkCallBack( \json_encode( $responseData ) );
         // 印出 Response
         echo $responseData;
         // 結束流程
@@ -114,9 +114,9 @@ abstract class AApi
     protected function responseError( $data = null ) : void
     {
         // 建立 Response Data
-        $responseData = $this->createResponseData( self::ERROR, $data );
+        $responseData = self::createResponseData( self::ERROR, $data );
         // 檢查 Call Back
-        $responseData = $this->checkCallBack( \json_encode( $responseData ) );
+        $responseData = self::checkCallBack( \json_encode( $responseData ) );
         // 印出 Response
         echo $responseData;
         // 結束流程
