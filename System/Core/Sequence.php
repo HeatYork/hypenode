@@ -12,6 +12,8 @@ class Sequence
 {
 
     public const CATEGORY_DEFAULT = 00000;
+    // web
+    public const WEB_ID = 10001;
 
     /**
      * Generate Sequence by SnowFlake
@@ -30,6 +32,7 @@ class Sequence
 
         //防止單一進程多次要求同類ID,會產生碰撞的問題
         usleep( 1 );
+
         // 主機名稱
         $hostName = 'Hosts1000001';
 

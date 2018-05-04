@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class CreateNotificationController extends BaseController
 {
@@ -14,12 +15,11 @@ class CreateNotificationController extends BaseController
      */
     public function index()
     {
-        $password = Hash::make('secret');
-
         $array = array(
-            'web_id' => 'hypenode',
+            'web_id'   => \Core\Sequence::generate(\Core\Sequence::WEB_ID),
+            'web_name' => 'hypenode',
             'username' => 'york',
-            'password' => 'yorkpw',
+            'password' => Hash::make('abcd'),
             'add_time' => time());
         DB::connection('mariadb')->table('account')->insert($array);
 //        return view('createNotification');

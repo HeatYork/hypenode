@@ -42,17 +42,18 @@ class CreateAccount extends AbstractMigration
         // table Column 設定
         $table->addColumn('web_id', 'char', [
             'null' => false,
-            'default' => 0,
             'limit' => 30,
             'comment' => '網站ID識別碼'
+        ])->addColumn('web_name', 'char', [
+            'null' => false,
+            'limit' => 30,
+            'comment' => '網站ID名稱'
         ])->addColumn('username', 'char', [
             'null' => false,
-            'default' => 0,
             'limit' => 30,
             'comment' => '帳號名稱'
         ])->addColumn('password', 'char', [
             'null' => false,
-            'default' => 0,
             'limit' => 30,
             'comment' => '帳號密碼'
         ])->addColumn('remember_token', 'integer', [
@@ -61,7 +62,6 @@ class CreateAccount extends AbstractMigration
             'comment' => 'laravel session token'
         ])->addColumn('add_time', 'integer', [
             'null' => false,
-            'default' => 0,
             'limit' => MysqlAdapter::INT_REGULAR,
             'precision' => 10,
             'comment' => '建立時間'
@@ -69,7 +69,10 @@ class CreateAccount extends AbstractMigration
 
 
         // table Index 設定
-        $table->addIndex(['username'], ['name' => 'username', 'unique' => false]);
+        $table->addIndex( [ 'web_id' ], [ 'name' => 'web_id', 'unique' => true ] );
+        $table->addIndex( [ 'username' ], [ 'name' => 'username', 'unique' => false ] );
+        $table->addIndex( [ 'web_id', 'username' ], [ 'name' => 'web_user', 'unique' => false ] );
+
 
         // 建立 table
         $table->create();
