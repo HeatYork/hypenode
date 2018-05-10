@@ -104,11 +104,11 @@
                 </span>
                 </div>
                 <div class="actions">
-                    <a class="btn btn-sm green" href="javascript:;">
+                    <a class="btn btn-sm green" href="javascript: void(0)">
                         <i class="far fa-plus-square"></i>
                         新增按鈕
                     </a>
-                    <a class="btn btn-sm green" href="javascript:;">
+                    <a class="btn btn-sm green" href="javascript: void(0)">
                         <i class="far fa-minus-square"></i>
                         移除按鈕
                     </a>
@@ -122,8 +122,8 @@
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group form-md-line-input has-success form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">標題</label>
+                                        <input type="text" class="form-control" id="title">
+                                        <label for="title">標題</label>
                                         <span class="help-block">has-success...</span>
                                         <i class="icon-direction"></i>
                                     </div>
@@ -132,8 +132,8 @@
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group form-md-line-input has-warning form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">內文</label>
+                                        <input type="text" class="form-control" id="body">
+                                        <label for="body">內文</label>
                                         <span class="help-block">has-warning...</span>
                                         <i class="icon-speech"></i>
                                     </div>
@@ -144,8 +144,8 @@
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group form-md-line-input has-error form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">圖示</label>
+                                        <input type="text" class="form-control" id="img">
+                                        <label for="img">圖示</label>
                                         <span class="help-block">has-error...</span>
                                         <i class="icon-picture"></i>
                                     </div>
@@ -154,8 +154,8 @@
                             <div class="col-sm-6 col-xs-12">
                                 <div class="form-group form-md-line-input has-info form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">連結</label>
+                                        <input type="text" class="form-control" id="url">
+                                        <label for="url">連結</label>
                                         <span class="help-block">has-info...</span>
                                         <i class="icon-link"></i>
                                     </div>
@@ -167,8 +167,8 @@
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group form-md-line-input has-success form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">按鈕-標題</label>
+                                        <input type="text" class="form-control" id="b_1_title">
+                                        <label for="b_1_title">按鈕-標題</label>
                                         <span class="help-block">has-error...</span>
                                         <i class="icon-direction"></i>
                                     </div>
@@ -177,8 +177,8 @@
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group form-md-line-input has-success form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">按鈕-圖示</label>
+                                        <input type="text" class="form-control" id="b_1_img">
+                                        <label for="b_1_img">按鈕-圖示</label>
                                         <span class="help-block">has-info...</span>
                                         <i class="icon-picture"></i>
                                     </div>
@@ -187,8 +187,8 @@
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group form-md-line-input has-success form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">按鈕-連結</label>
+                                        <input type="text" class="form-control" id="b_1_url">
+                                        <label for="b_1_url">按鈕-連結</label>
                                         <span class="help-block">has-info...</span>
                                         <i class="icon-link"></i>
                                     </div>
@@ -200,8 +200,8 @@
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group form-md-line-input has-success form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">按鈕-標題</label>
+                                        <input type="text" class="form-control" id="b_2_title">
+                                        <label for="b_2_title">按鈕-標題</label>
                                         <span class="help-block">has-error...</span>
                                         <i class="icon-direction"></i>
                                     </div>
@@ -210,8 +210,8 @@
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group form-md-line-input has-success form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">按鈕-圖示</label>
+                                        <input type="text" class="form-control" id="b_2_img">
+                                        <label for="b_2_img">按鈕-圖示</label>
                                         <span class="help-block">has-info...</span>
                                         <i class="icon-picture"></i>
                                     </div>
@@ -220,8 +220,8 @@
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group form-md-line-input has-success form-md-floating-label">
                                     <div class="input-icon right">
-                                        <input type="text" class="form-control">
-                                        <label for="form_control_1">按鈕-連結</label>
+                                        <input type="text" class="form-control" id="b_2_url">
+                                        <label for="b_2_url">按鈕-連結</label>
                                         <span class="help-block">has-info...</span>
                                         <i class="icon-link"></i>
                                     </div>

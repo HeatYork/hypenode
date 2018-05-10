@@ -5,18 +5,18 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!-- BEGIN GLOBAL PLUGINS STYLES -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="css/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="{{ \url('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ \url('css/font-awesome.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ \url('css/simple-line-icons.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL PLUGINS STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS STYLES-->
     <!-- END PAGE LEVEL PLUGINS STYLES-->
 
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
-    <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
+    <link href="{{ \url('css/components.min.css') }}" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="{{ \url('css/layout.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ \url('css/default.min.css') }}" rel="stylesheet" type="text/css" id="style_color" />
     <!-- END THEME GLOBAL STYLES -->
 
     <!-- BEGIN THEME PAGE LEVEL STYLES -->
@@ -93,17 +93,17 @@
 <!--END JSON DATA END-->
 
 <!-- BEGIN GLOBAL PLUGINS PLUGINS -->
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/bootstrap-switch.min.js" type="text/javascript"></script>
-<script src="js/fontawesome-all.min.js" type="text/javascript"></script>
+<script src="{{ \url('js/jquery.min.js') }}" type="text/javascript"></script>
+<script src="{{ \url('js/bootstrap.min.js') }}" type="text/javascript"></script>
+<script src="{{ \url('js/bootstrap-switch.min.js') }}" type="text/javascript"></script>
+<script src="{{ \url('js/fontawesome-all.min.js') }}" type="text/javascript"></script>
 <!-- END GLOBAL PLUGINS PLUGINS -->
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
-<script src="js/app.min.js" type="text/javascript"></script>
+<script src="{{ \url('js/app.min.js') }}" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
@@ -111,7 +111,7 @@
 <!-- END PAGE LEVEL SCRIPTS -->
 
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
-<script src="js/layout.min.js" type="text/javascript"></script>
+<script src="{{ \url('js/layout.min.js') }}" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 </body>
 </html>

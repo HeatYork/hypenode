@@ -24,7 +24,7 @@
                         <ui class="nav nav navbar-nav pull-right">
                             <!-- BEGIN QUICK SIDEBAR TOGGLER -->
                             <li class="dropdown dropdown-user dropdown-dark">
-                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <span class="username username-hide-mobile">Nick</span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
