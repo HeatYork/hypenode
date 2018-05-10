@@ -8,7 +8,7 @@
                 <div class="container">
 
                     <!-- BEGIN LOGO -->
-                    <div class="page-logo" onclick="javascript:location.href='{{ \url( '' ) }}'">
+                    <div class="page-logo" onclick="location.href='{{ \url( '' ) }}'">
                         <h2 class="font-green" >
                             HypeNode
                         </h2>
@@ -21,7 +21,7 @@
 
                     <!-- BEGIN TOP NAVIGATION MENU -->
                     <div class="top-menu">
-                        <ui class="nav nav navbar-nav pull-right">
+                        <ul class="nav nav navbar-nav pull-right">
                             <!-- BEGIN QUICK SIDEBAR TOGGLER -->
                             <li class="dropdown dropdown-user dropdown-dark">
                                 <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
@@ -57,7 +57,7 @@
                                 <i class="icon-logout"></i>
                             </li>
                             <!-- END QUICK SIDEBAR TOGGLER -->
-                        </ui>
+                        </ul>
                     </div>
                     <!-- END TOP NAVIGATION MENU -->
 
