@@ -14,7 +14,7 @@
     <!-- END PAGE LEVEL PLUGINS STYLES-->
 
     <!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="css/components.css" rel="stylesheet" id="style_components" type="text/css" />
+    <link href="css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
     <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
     <link href="css/default.min.css" rel="stylesheet" type="text/css" id="style_color" />
     <!-- END THEME GLOBAL STYLES -->
