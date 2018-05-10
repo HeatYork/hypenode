@@ -5,7 +5,7 @@
 @endsection
 
 @section('pageCss')
-<link href="css/notification.css" rel="stylesheet" type="text/css" />
+<link href="{{ \url('css/notification.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 
 @section('body')

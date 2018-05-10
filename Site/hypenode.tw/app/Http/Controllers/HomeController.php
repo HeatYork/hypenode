@@ -6,7 +6,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class CreateNotificationController extends BaseController
+class HomeController extends BaseController
 {
     /**
      * index
@@ -15,6 +15,6 @@ class CreateNotificationController extends BaseController
      */
     public function index()
     {
-        return view('createNotification');
+        return view('home');
     }
 }

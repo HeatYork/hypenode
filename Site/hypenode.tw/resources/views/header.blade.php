@@ -8,7 +8,7 @@
                 <div class="container">
 
                     <!-- BEGIN LOGO -->
-                    <div class="page-logo" onclick="javascript:location.href='http://dev-hypenode.tw/design/index.php'">
+                    <div class="page-logo" onclick="javascript:location.href='{{ \url( '' ) }}'">
                         <h2 class="font-green" >
                             HypeNode
                         </h2>
@@ -73,21 +73,21 @@
                         <ul class="nav navbar-nav">
 
                             <li class="menu-dropdown classic-menu-dropdown">
-                                <a href="index.php?page=dashboard">
+                                <a href="{{ \url('dashboard') }}">
                                     <i class="fas fa-tachometer-alt"></i>
                                     儀表板
                                 </a>
                             </li>
 
                             <li class="menu-dropdown classic-menu-dropdown">
-                                <a>
+                                <a href="{{ \url('dashboard') }}">
                                     <i class="fas fa-clipboard-list"></i>
                                     推播紀錄
                                 </a>
                             </li>
 
                             <li class="menu-dropdown classic-menu-dropdown">
-                                <a href="push">
+                                <a href='{{ \url('createNotification') }}'>
                                     <i class="fas fa-paper-plane"></i>
                                     建立推播活動
                                 </a>

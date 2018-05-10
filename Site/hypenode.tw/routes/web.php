@@ -10,9 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index');
+
+// 建立通知頁面相關
 Route::get('createNotification','CreateNotificationController@index');
 
 
