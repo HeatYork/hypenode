@@ -16,7 +16,9 @@
         <!--<testsuite name="Unit">-->
             <!--<directory suffix="Test.php">./tests/Unit</directory>-->
         <!--</testsuite>-->
-
+        <testsuite name="Routes">
+            <directory suffix="Test.php">./tests/RoutesUnitTest</directory>
+        </testsuite>
         <testsuite name="Model">
             <directory suffix="Test.php">./tests/ModelUnitTest</directory>
         </testsuite>
