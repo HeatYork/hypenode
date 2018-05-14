@@ -1,4 +1,4 @@
-@extends('master')
+@extends('base.master')
 
 @section('pageJs')
 
