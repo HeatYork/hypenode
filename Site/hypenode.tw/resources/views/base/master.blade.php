@@ -29,7 +29,7 @@
 <body class="page-container-bg-solid">
 <div class ="page-wrapper">
     <!--START HEADER START-->
-    @include('header')
+    @include('base.header')
     <!--END HEADER END-->
 
     <!--START BODY START-->
@@ -81,7 +81,7 @@
     <!--END BODY START-->
 
     <!--START FOOTER START-->
-    @yield('footer')
+    @include('base.footer')
     <!--END FOOTER END-->
 </div>
 

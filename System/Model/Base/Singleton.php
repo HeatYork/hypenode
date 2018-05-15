@@ -9,7 +9,7 @@ abstract class Singleton
 {
     final protected function __construct(){}
 
-    abstract protected function init( $initData );
+    abstract protected function _init( $initData );
 
     public static function getInstance( $initData )
     {
@@ -22,7 +22,7 @@ abstract class Singleton
         }
         if( isset($initData) )
         {
-            $object[$class]->init($initData);
+            $object[$class]->_init($initData);
         }
         return $object[$class];
     }
