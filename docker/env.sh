@@ -8,7 +8,7 @@ clear
 while :
 do
     # 選擇要啟動的系統
-    printf "\E[0;36;47m"
+    printf "\E[0;30;47m"
     echo "                HypeNode                "
     printf "\E[0m"
 
@@ -65,8 +65,9 @@ do
             docker-compose up -d --build php
             # 啟動 nginx
             docker-compose up -d --build nginx
-            # 啟動 mysql
-            docker-compose up -d --build mariadb
+            # 啟動 mariadb
+            docker-compose up -d --build mariadb-master
+            #docker-compose up -d --build mariadb-slave01
             # 啟動 phpmyadmin_mysql
             docker-compose up -d --build phpmyadmin
             # 啟動 redis
@@ -81,8 +82,9 @@ do
             docker-compose up -d --build nginx
             ;;
         3)
-            # 啟動 mysql
-            docker-compose up -d --build mariadb
+            # 啟動 mariadb
+            docker-compose up -d --build mariadb-master
+            docker-compose up -d --build mariadb-slave01
             ;;
         4)
             # 啟動 phpmyadmin_mysql
@@ -99,8 +101,9 @@ do
             docker-compose up -d --build php
             # 啟動 nginx
             docker-compose up -d --build nginx
-            # 啟動 mysql
-            docker-compose up -d --build mariadb
+            # 啟動 mariadb
+            docker-compose up -d --build mariadb-master
+            docker-compose up -d --build mariadb-slave01
             # 啟動 phpmyadmin_mysql
             docker-compose up -d --build phpmyadmin
             # 啟動 redis
