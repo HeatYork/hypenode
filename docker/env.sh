@@ -8,7 +8,7 @@ clear
 while :
 do
     # 選擇要啟動的系統
-    printf "\E[0;36;47m"
+    printf "\E[0;30;47m"
     echo "                HypeNode                "
     printf "\E[0m"
 
