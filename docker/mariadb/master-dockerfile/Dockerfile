@@ -1,8 +1,13 @@
 FROM mariadb:10.2
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get -o Dpkg::Options::='--force-confnew' -qqy install galera rsync && \
-    rm -rf /var/lib/apt/lists/*
+RUN apt-get update && \
+	apt-get install -y curl && \
+	apt-get -y clean
 
 COPY start.sh /start.sh
+#RUN mv /etc/mysql/config.cnf /etc/mysql/config.cnf.orig
+COPY ./config.cnf /etc/mysql/
 
-CMD ["/start.sh"]
+EXPOSE 3306 4567 4568 4444
+
+#CMD ["start.sh"]

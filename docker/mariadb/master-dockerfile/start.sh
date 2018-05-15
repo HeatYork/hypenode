@@ -1,13 +1,24 @@
-#!/bin/bash
-set -e
-exec "/usr/local/bin/docker-entrypoint.sh mysqld --wsrep-new-cluster"
-#
-#CMD="/usr/local/bin/docker-entrypoint.sh mysqld"
-#LOCKFILE="/var/lib/mysql/cluster_initialized.lock"
-#
-#if [ "$GALERA_PRIMARY" = "true" ]; then
-#    if [ ! -f "$LOCKFILE" ]; then
-#        CMD="$CMD --wsrep-new-cluster"
-#        touch "$LOCKFILE"
-#    fi
+#!/bin/sh
+
+#if [ "${TUTUM_SERVICE_API_URL}x" != "x" ]; then
+#	T=$(curl -s -H "Authorization: $TUTUM_AUTH" -H "Accept: application/json" $TUTUM_SERVICE_API_URL | tr ',' '\n' | grep ENV_TUTUM_IP_ADDRESS | grep -v ${TUTUM_IP_ADDRESS} | awk -F\" '{print $4}' | awk -F\/ '{print $1}' | sort -u)
+#	CLUSTER=""
+#	for Y in $T; do
+#	    CLUSTER="${CLUSTER}${Y},"
+#	done
 #fi
+#
+#CLUSTER="${CLUSTER%?}"
+#NODE_ADDR=$(echo ${TUTUM_IP_ADDRESS} | awk -F\/ '{print $1}')
+#
+#if [ "x${CLUSTER}" = "x" ]; then
+#    echo "I'm alone ${NODE_ADDR} Bootstrap Cluster (Throw away container if this is not the first container)"
+#    CLUSTER="gcomm://"
+#else
+#    echo "I'm not alone! My buddies: ${CLUSTER} and me ${NODE_ADDR}"
+#    CLUSTER="gcomm://${CLUSTER}"
+#fi
+
+INNOBDB_BUFFER_POOL_SIZE=$((`cat /proc/meminfo | grep MemTotal | cut -d ' ' -f 9` / 2000))M
+echo /docker-entrypoint.sh --innodb_buffer-pool-size=$INNOBDB_BUFFER_POOL_SIZE --wsrep_sst_auth=wsrep_sst_auth --wsrep_node_address=${HOSTNAME} --wsrep_node_incoming_address=${HOSTNAME} --wsrep_cluster_address="gcomm://mariadb-master" --wsrep_node_name=${HOSTNAME} ${EXTRA_OPTIONS}
+/docker-entrypoint.sh --innodb_buffer-pool-size=$INNOBDB_BUFFER_POOL_SIZE --wsrep_sst_auth=${wsrep_sst_auth} --wsrep_node_address=${HOSTNAME} --wsrep_node_incoming_address=${HOSTNAME} --wsrep_cluster_address="gcomm://mariadb-master" --wsrep_node_name=${HOSTNAME} ${EXTRA_OPTIONS}

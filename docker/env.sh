@@ -67,7 +67,7 @@ do
             docker-compose up -d --build nginx
             # 啟動 mariadb
             docker-compose up -d --build mariadb-master
-            #docker-compose up -d --build mariadb-slave01
+            docker-compose up -d --build mariadb-slave01
             # 啟動 phpmyadmin_mysql
             docker-compose up -d --build phpmyadmin
             # 啟動 redis
@@ -84,7 +84,7 @@ do
         3)
             # 啟動 mariadb
             docker-compose up -d --build mariadb-master
-            docker-compose up -d --build mariadb-slave01
+            #docker-compose up -d --build mariadb-slave01
             ;;
         4)
             # 啟動 phpmyadmin_mysql
@@ -103,7 +103,7 @@ do
             docker-compose up -d --build nginx
             # 啟動 mariadb
             docker-compose up -d --build mariadb-master
-            docker-compose up -d --build mariadb-slave01
+            #docker-compose up -d --build mariadb-slave01
             # 啟動 phpmyadmin_mysql
             docker-compose up -d --build phpmyadmin
             # 啟動 redis
