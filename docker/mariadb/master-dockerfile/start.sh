@@ -20,5 +20,5 @@
 #fi
 
 INNOBDB_BUFFER_POOL_SIZE=$((`cat /proc/meminfo | grep MemTotal | cut -d ' ' -f 9` / 2000))M
-echo /docker-entrypoint.sh --innodb_buffer-pool-size=$INNOBDB_BUFFER_POOL_SIZE --wsrep_sst_auth=wsrep_sst_auth --wsrep_node_address=${HOSTNAME} --wsrep_node_incoming_address=${HOSTNAME} --wsrep_cluster_address="gcomm://mariadb-master" --wsrep_node_name=${HOSTNAME} ${EXTRA_OPTIONS}
-/docker-entrypoint.sh --innodb_buffer-pool-size=$INNOBDB_BUFFER_POOL_SIZE --wsrep_sst_auth=${wsrep_sst_auth} --wsrep_node_address=${HOSTNAME} --wsrep_node_incoming_address=${HOSTNAME} --wsrep_cluster_address="gcomm://mariadb-master" --wsrep_node_name=${HOSTNAME} ${EXTRA_OPTIONS}
+echo /docker-entrypoint.sh --innodb_buffer-pool-size=$INNOBDB_BUFFER_POOL_SIZE --wsrep_sst_auth=wsrep_sst_auth --wsrep_node_address="mariadb-master" --wsrep_node_incoming_address="mariadb-master" --wsrep_cluster_address="gcomm://" --wsrep_node_name="mariadb-master"
+/docker-entrypoint.sh --innodb_buffer-pool-size=$INNOBDB_BUFFER_POOL_SIZE --wsrep_sst_auth=${wsrep_sst_auth} --wsrep_node_address="mariadb-master" --wsrep_node_incoming_address="mariadb-master" --wsrep_cluster_address="gcomm://" --wsrep_node_name="mariadb-master"
