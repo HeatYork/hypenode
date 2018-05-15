@@ -8,33 +8,54 @@ clear
 while :
 do
     # 選擇要啟動的系統
+    printf "\E[0;36;47m"
+    echo "                HypeNode                "
+    printf "\E[0m"
+
+    printf "\E[0;32;40m"
     echo "----------------------------------------"
-    echo "選擇要啟動的系統:"
+    echo "            選擇要啟動的系統            "
     echo "----------------------------------------"
-    echo "a. 所有 Server"
+    printf "\E[0m"
+
+    echo -e "  \033[31ma.\033[0m 所有 Server"
+    echo -e "  \033[31m1.\033[0m PHP"
+    echo -e "  \033[31m2.\033[0m Nginx"
+    echo -e "  \033[31m3.\033[0m Mariadb"
+    echo -e "  \033[31m4.\033[0m PhpMyAdmin"
+    echo -e "  \033[31m5.\033[0m Redis"
+
+    printf "\E[0;32;40m"
     echo "----------------------------------------"
-    echo "1. PHP"
-    echo "2. Nginx"
-    echo "3. Mariadb"
-    echo "4. PhpMyAdmin"
-    echo "5. Redis"
+    echo "                 工具                   "
     echo "----------------------------------------"
-    echo "工具:"
+    printf "\E[0m"
+
+    echo -e "  \033[31mr.\033[0m 重啟 Docker 所有容器"
+    echo -e "  \033[31mc.\033[0m 關閉 Docker 所有容器"
+    echo -e "  \033[31ml.\033[0m 顯示 Docker 所有容器"
+    echo -e "  \033[31md.\033[0m 指定重啟 Docker 項目編號容器"
+    echo -e "      - Example: 重啟 PHP 容器"
+    echo -e "      - input: d 1"
+    echo -e "  \033[31mq.\033[0m Exit"
+
+    printf "\E[0;32;40m"
     echo "----------------------------------------"
-    echo "r. 重啟 Docker 所有容器"
-    echo "c. 關閉 Docker 所有容器"
-    echo "l. 顯示 Docker 所有容器"
-    echo "d. 指定重啟 Docker 項目編號容器"
-    echo "  - Example: 重啟 PHP 容器"
-    echo "  - input: d 1"
-    echo "q. Exit"
+    echo "           選擇 migrate 設定            "
     echo "----------------------------------------"
-    echo "選擇 migrate 設定:"
+    printf "\E[0m"
+
+
+    echo -e "  \033[31mmg.\033[0m 執行 migrate"
+    echo -e "  \033[31mrb.\033[0m 執行 rollback"
+
+    printf "\E[0;32;40m"
     echo "----------------------------------------"
-    echo "mg. 執行 migrate"
-    echo "rb. 執行 rollback"
-    echo "----------------------------------------"
+    printf "\E[0m"
+    printf "\E[0;31m"
     read -p "Input:" input input2
+    printf "\E[0m"
+
 
     clear
 
